@@ -1,0 +1,11 @@
+<script>
+    let req = new XMLHttpRequest();
+    req.onreadystatechange = function () {
+        if(this.readyState === 4 && this.status === 200){
+            var data = JSON.parse(this.responseText);
+            console.log(data);
+        }
+    }
+    req.open("POST","getTable.php",true);
+    req.send();
+</script>
